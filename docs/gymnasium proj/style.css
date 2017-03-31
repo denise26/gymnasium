@@ -1,0 +1,522 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+		font-family:Verdana, Geneva, sans-serif;
+}
+body{
+	background:  #FFE6BA;
+	}
+main{
+	background: white;
+	margin: 1em;
+	}	
+
+figure{
+	float: right;
+	padding: .5em;
+	border-right: 2px solid #50BFB0;
+	border-bottom: 3px solid #50BFB0; 
+	}	
+p{
+	font-size: 1.1em;
+	line-height: 1.25;
+padding: .25em 1em .25em 1em;
+	}	
+
+header{	 
+	background: #79D8CB;
+margin: 1em;
+}
+
+/*navigation menu */
+
+nav{
+	padding: .5em 1em .5em 1em;
+	border:0px;	}
+
+nav a:focus, a:hover{
+	background: #ADEEE5;
+	}
+nav ul{
+	list-style-type:none;
+	margin: auto;
+    padding: 0;
+    overflow: hidden;
+    	}	
+nav li{
+	 float: left;
+	 display: block;
+		}
+	
+nav	li a {
+    display: block;
+    text-align: center;
+    padding: 1em 2em 1em 2em;
+    text-decoration: none;
+	font-weight: bold;
+	color: black;
+	
+}
+header h1{
+	text-shadow: 2px 2px 0px #E12436;
+	padding: 20px 20px 0px 20px;
+	margin-bottom:0em;
+	font-size: 3em;
+	font-weight: bold;
+	letter-spacing: 5px;
+		}
+h2{
+	font-size: 1.5em;
+	padding: 1em 0em 0em 1em;
+	color: #E12436;
+		 }
+h3{
+	font-size: 1.25em;
+	padding: 1em 0em 0em 1em;
+	color: #E12436;
+		 }
+
+
+/* example of how to use generated content
+h2::after{
+	content:":";
+	}*/
+
+
+figcaption{
+	font-size: .75em;
+	text-align: center;
+	}
+	
+	/*animation assignment*/
+	
+	/* @keyframes move{
+		from {left: 0px;}
+    to {left: 1000px;}
+		} */
+/*obnoxious scrolling header 	
+h2{
+	position:relative;
+	animation: move 10s infinite alternate;
+	}*/
+	
+.gallery figure{
+	margin: auto;
+	float: none;
+	display: inline-block; 
+	border: none;
+	padding:2em;
+
+	}	
+	.gallery figure img{
+		 transition-property: width;
+		 transition-property: height;
+		 }
+		 
+	.gallery figure img:hover, img:active{
+		min-width:150px;
+		min-height:150px;
+	transition-delay:.5s;	}
+.gallery figure:hover{
+		font-size:1.25em;
+		}
+
+
+footer{
+	background: #FDB9BF;
+	margin: 1em;
+	}
+footer p{
+	text-align:right;
+	}
+	
+footer a{
+	color: #179281;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+	@media print{
+		
+		nav{
+			display: none;
+			}
+		*{
+			background: white;
+			color: black;
+			}
+		h1{
+				font-size:2em;
+				}
+		h2{
+					font-size:1.5em;
+					color: black;
+					}
+		h3{
+			color: black;
+			font-size:1.25em;
+			}
+		figure{
+			border:none;
+			}
+		footer p{
+			text-align: left;
+			font-size: 85%;
+			}
+		footer a{
+			font-weight:normal;
+			color: blue;
+			text-decoration: underline;
+			}
+		}
+/*my test of media css; disabled to test javascript menu 		@media (min-width: 2000px) {
+			main, header, footer{
+				margin: 0 15%;
+				}
+			}
+			
+					@media (max-device-width:400px), (max-width: 400px) {
+			header h1{
+				font-size: 1.5em;
+				text-shadow: none;
+	padding: 10px 10px 0px 10px;
+	margin-bottom:0em;
+	font-weight: bold;
+	letter-spacing: 0px;
+			}
+			figure{
+				margin-left: .5em;
+				}
+			li a{
+				font-size:1.5em;	
+					}
+			
+			figcaption{
+						font-size:1em;
+						}
+				}*/
+				
+@media (min-width:40.5em){
+	#nav-jump{
+	display:none;
+	}
+	}				
+				
+	@media only screen and (min-width:15em) and (max-width:40.5em) {
+#getActiveMQ-watcher{font-family:"default";}
+	#getActiveMQ-watcher{font-family:"small";}
+		
+		/*for nav from demo site */
+		#nav-jump {
+   /* border: 1px solid white;*/
+    border-radius: 3px;
+    background: #E12436;
+    color: white;
+    font: bold .875em Oxygen, Helvetica, Arial, sans-serif;
+    padding: .5em;
+	width: 100%;
+	text-align:right;
+    text-transform: uppercase;
+    /* move to the upper right corner */
+    position: absolute;
+    top: 0em;
+	right: 1em;
+    z-index: 1000;
+}
+header h1{
+				font-size: 1.5em;
+				text-shadow: none;
+	padding: 1.75em .75em .75em;
+	margin-bottom:0em;
+	font-weight: bold;
+	letter-spacing: 0px;
+			}
+
+   body:not(:target) #menu {
+        max-width: 100%;
+        width: auto;
+        position: absolute;
+	        top: 0;
+        left: 0;
+        right: 0;
+        outline: 0;
+    }
+	
+	 body:not(:target) #menu ul {
+           /* background: transparent;*/
+            border: 1px solid transparent;
+			background: white;
+            border: 2 px solid black;
+            max-width: 16em; /* 16 * 12.5 = 200 */
+            position: absolute;
+			right: 2%;
+            top: 3em;
+            z-index: 1002;
+			 
+        }
+		   body:not(:target) #menu ul li{
+        float:none;			
+        }
+        body:not(:target) #menu ul a {
+            border-bottom-width: 0;
+            /*overflow: hidden;*/
+            height: 1.5em;
+			width: auto;
+			text-align:left;
+			margin: .25em .25em .25em .25em;
+            /* Hardware Accelerate for better animation */
+               -moz-transform: translate3d(0,0,0);
+                -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+                    transform: translate3d(0,0,0);
+               -moz-transition: height .15s;
+                -ms-transition: height .15s;
+            -webkit-transition: height .15s;
+                    transition: height .15s;
+        }
+        body:not(:target) #menu:target {
+            /* Overlay everything */
+            bottom: 0;
+            height: 100%;
+        }
+        body:not(:target) #menu:target ul {
+            background: #fff;
+            background-color: rgba(255, 255, 255, .95);
+            border-color: #000;
+			        }
+        body:not(:target) #menu:target ul a {
+            border-bottom-width: 1px;
+            height: 1.5em;
+			 position: relative;
+            z-index: 1;
+               -moz-transition: height .25s;
+                -ms-transition: height .25s;
+            -webkit-transition: height .25s;
+                    transition: height .25s;
+        }
+		
+		
+        body:not(:target) #menu-close {
+          
+		    border: 0;
+			display: none;
+			position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+           /* z-index: 1001;*/
+        }
+ 
+
+    /* Drawer Nav */
+    .drawer-nav-enabled {
+        /* nothing to see here :-) */
+    }
+        .drawer-nav-enabled body {
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            left: 0;
+               -moz-transition: left .25s ease;
+                 -o-transition: left .25s ease;
+            -webkit-transition: left .25s ease;
+                    transition: left .25s ease;
+            /* Hardware acceleration for the animation */
+               -moz-transform: translate3d(0,0,0);
+                -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+                    transform: translate3d(0,0,0);
+        }
+        .drawer-nav-enabled body #menu {
+            overflow: auto;
+            overflow-x: hidden;
+            width: 0;
+            max-width: 80%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            z-index: 3;
+               -moz-transition: width .25s ease;
+                 -o-transition: width .25s ease;
+            -webkit-transition: width .25s ease;
+                    transition: width .25s ease;
+        }
+            .drawer-nav-enabled body #menu ul {
+                position: static;
+                max-width: 100%;
+            }
+             /*   .drawer-nav-enabled body #menu ul a {
+                    height: auto;
+                }
+                    .drawer-nav-enabled body #menu ul a:hover,
+                    .drawer-nav-enabled body #menu ul a:focus {
+                        background-color: #ccc;
+                    }*/
+        .drawer-nav-open {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+		
+            .drawer-nav-open body {
+                left: -80%;
+                overflow: visible;
+            }
+                .drawer-nav-open body #menu {
+                    overflow: visible;
+                    width: 80%;
+                }
+                .drawer-nav-open body #menu-close {
+                    background: black;
+                    background: rgba( 0, 0, 0, .5 );
+                    left: -100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+	}
+	
+	/* test*/
+	  /* for getActiveMQ */
+    #getActiveMQ-watcher { font-family: "small"; }
+
+}
+ 
+/* >= 648px */
+/*@media only screen and (min-width:40.5em) {
+    
+    /* =================================================================
+     * Navigation
+     * ================================================================= */
+ /*   #nav-jump {
+        right: auto;
+        left:  -999em;
+    }
+        #nav-jump:focus {
+            right: 1em;
+            left:  auto;
+        }
+    #menu {
+        position: absolute;
+        top: 3.75em;
+        right: 0;
+        white-space: nowrap;
+    }
+        #menu ul {
+            background: transparent;
+            border: 0;
+        }
+        #menu li,
+        #menu a {
+            border: 0;
+            display: inline-block;
+        }
+        #menu a {
+            border-radius: 5px 5px 0 0;
+            color: #fff;
+            line-height: 2em;
+            padding: 0 1em;
+        }
+        #menu mark a {
+            background: #fff;
+            color: #000;
+        }
+        #menu ul a:hover,
+        #menu ul a:focus,
+        #menu ul mark a:hover,
+        #menu ul mark a:focus {
+            background: #ccc;
+            color: #000;
+        }
+        #menu ul a:active,
+        #menu ul mark a:active {
+            background: green;
+            color: #fff;
+        }
+    .home #menu {
+        position: static;
+        text-align: center;
+        margin: 1em auto;
+        padding: 0;
+        white-space: normal;
+    }
+        .home #menu ul {
+            width: auto;
+        }
+        .home #menu li {
+            display: block;
+        }
+        .home #menu a {
+            border-radius: 5px;
+            color: #000;
+        }
+        .home #menu mark a {
+            background: #000;
+            color: #fff;
+        }
+        .home #menu ul a:hover,
+        .home #menu ul a:focus,
+        .home #menu ul mark a:hover,
+        .home #menu ul mark a:focus {
+            background: #ccc;
+            color: #000;
+        }
+        .home #menu h1.hidden,
+        .home #menu ul .hidden {
+            position: static !important;
+            width: 100%;
+            height: auto;
+            clip: inherit;
+            overflow: visible;
+        }
+        .home #menu h1 {
+            margin-bottom: .5em;
+        }
+            .home #menu h1::before {
+                content: " ";
+                display: block;
+                height: 0;
+                margin: .5em auto 1em;
+                width: 50%;
+                border-top: 1px solid #ccc;
+            }
+    .home #menu-close::before {
+        color: #000;
+        content: "^ Return to the top";
+        display: inline-block;
+        font-size: .75em;
+        margin-top: 1em;
+        text-transform:  uppercase;
+    }
+    
+/*
+    /* =================================================================
+     * Figures
+     * ================================================================= */
+    .figure--inline {
+        float: right;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+        h1 + .figure--inline::before {
+            display: none;
+        }
+/* =================================================================
+ * Helpers
+ * ================================================================= */
+.hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6 and IE7 use the wrong syntax */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
